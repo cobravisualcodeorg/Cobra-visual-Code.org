@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Python - Página 1</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #1e1e1e;
+            color: #f0f0f0;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #f39c12;
+            padding: 20px 0;
+            text-align: center;
+            color: #fff;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        .content {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section h2 {
+            color: #f39c12;
+            font-size: 2rem;
+            border-bottom: 2px solid #f39c12;
+            padding-bottom: 10px;
+        }
+
+        .section p {
+            margin: 15px 0;
+            font-size: 1.2rem;
+        }
+
+        .code-block {
+            background-color: #333;
+            color: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            margin: 15px 0;
+        }
+
+        .code-block pre {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            text-decoration: none;
+            font-size: 1.5rem;
+            color: #fff;
+            background-color: #f39c12;
+            padding: 10px 25px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #e67e22;
+        }
+
+        footer {
+            background-color: #1c1c1c;
+            color: #888;
+            text-align: center;
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        .highlight {
+            background-color: #e67e22;
+            color: #fff;
+            padding: 3px 6px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Introducción a Python - Página 1</h1>
+    </header>
+
+    <div class="content">
+        <!-- Introducción a Python -->
+        <div class="section">
+            <h2>¿Qué es Python?</h2>
+            <p>
+                Python es un lenguaje de programación interpretado, de alto nivel y de propósito general. Fue creado por Guido van Rossum y lanzado en 1991. 
+                Su diseño enfatiza la legibilidad del código, lo que facilita su aprendizaje para los principiantes y mejora la productividad de los programadores.
+            </p>
+            <p>
+                Python es conocido por ser sencillo y muy versátil. Se utiliza en desarrollo web, análisis de datos, inteligencia artificial, automatización de tareas, y mucho más.
+            </p>
+        </div>
+
+        <!-- Ventajas de Python -->
+        <div class="section">
+            <h2>¿Por qué elegir Python?</h2>
+            <p>Algunas de las principales ventajas de Python son:</p>
+            <ul>
+                <li><strong>Fácil de aprender:</strong> Tiene una sintaxis clara y fácil de entender, lo que lo hace ideal para principiantes.</li>
+                <li><strong>Comunidad activa:</strong> Hay una enorme comunidad de Python, lo que garantiza que siempre haya recursos, ayuda y nuevas librerías.</li>
+                <li><strong>Versatilidad:</strong> Desde desarrollo web (con Django, Flask) hasta análisis de datos (con Pandas, NumPy), Python es perfecto para cualquier tipo de proyecto.</li>
+                <li><strong>Gran cantidad de bibliotecas:</strong> Python tiene una enorme colección de bibliotecas que facilitan realizar tareas complejas con pocas líneas de código.</li>
+            </ul>
+        </div>
+
+        <!-- Instalación de Python -->
+        <div class="section">
+            <h2>Instalación de Python</h2>
+            <p>Para instalar Python en tu computadora, sigue estos pasos:</p>
+            <ol>
+                <li>Ve a la página oficial de <a href="https://www.python.org/downloads/" target="_blank">Python.org</a>.</li>
+                <li>Selecciona la versión adecuada para tu sistema operativo (Windows, macOS, Linux).</li>
+                <li>Descarga el instalador y ejecútalo. Asegúrate de seleccionar la opción <strong>"Add Python to PATH"</strong> durante la instalación.</li>
+                <li>Una vez instalado, abre la terminal o línea de comandos y escribe <code>python --version</code> para asegurarte de que Python se instaló correctamente.</li>
+            </ol>
+        </div>
+
+        <!-- Primer Programa en Python -->
+        <div class="section">
+            <h2>Tu Primer Programa en Python</h2>
+            <p>Vamos a escribir el clásico "¡Hola, Mundo!" en Python.</p>
+            <div class="code-block">
+                <pre>
+# Este es el primer programa en Python
+print("¡Hola, Mundo!")
+                </pre>
+            </div>
+            <p>Este código imprime el mensaje <strong>"¡Hola, Mundo!"</strong> en la consola.</p>
+            <p>Guarda este código en un archivo llamado <code>hola_mundo.py</code> y ejecútalo desde la terminal:</p>
+            <div class="code-block">
+                <pre>python hola_mundo.py</pre>
+            </div>
+        </div>
+
+        <!-- Explicación de conceptos básicos -->
+        <div class="section">
+            <h2>Conceptos Básicos de Python</h2>
+            <p>A continuación, explicaremos algunos conceptos clave para que puedas empezar a escribir más programas.</p>
+
+            <h3>Variables y Tipos de Datos</h3>
+            <p>En Python, las variables se usan para almacenar datos. Python es un lenguaje con tipado dinámico, lo que significa que no necesitas declarar el tipo de datos al crear una variable.</p>
+            <div class="code-block">
+                <pre>
+# Ejemplo de variables
+nombre = "Juan"
+edad = 25
+altura = 1.75
+                </pre>
+            </div>
+            <p>En este ejemplo, hemos creado tres variables: <code>nombre</code>, <code>edad</code> y <code>altura</code>, con tipos de datos diferentes:</p>
+            <ul>
+                <li><code>nombre</code>: una cadena de texto (string).</li>
+                <li><code>edad</code>: un número entero (integer).</li>
+                <li><code>altura</code>: un número flotante (float).</li>
+            </ul>
+
+            <h3>Operaciones Básicas</h3>
+            <p>Python permite realizar operaciones matemáticas fácilmente. Por ejemplo:</p>
+            <div class="code-block">
+                <pre>
+# Operaciones en Python
+a = 10
+b = 5
+suma = a + b
+resta = a - b
+multiplicacion = a * b
+division = a / b
+                </pre>
+            </div>
+            <p>Estas son algunas operaciones básicas en Python:</p>
+            <ul>
+                <li><code>a + b</code>: suma.</li>
+                <li><code>a - b</code>: resta.</li>
+                <li><code>a * b</code>: multiplicación.</li>
+                <li><code>a / b</code>: división.</li>
+            </ul>
+        </div>
+
+        <!-- Final y botón de siguiente página -->
+        <div class="btn-container">
+            <a href="pagina2.html" class="btn">Siguiente Página - Condicionales y Bucles</a>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2024 Cobra Visual Code. ¡Vamos a aprender Python juntos!
+    </footer>
+
+</body>
+</html>
