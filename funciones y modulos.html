@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Python: Funciones y Módulos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FF7043;  /* Color naranja */
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            border-left: 5px solid #4CAF50;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .example {
+            background-color: #e9f7e9;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Estilo para el botón */
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #FF7043; /* Color naranja para el botón */
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF5722; /* Un tono más oscuro de naranja */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Funciones y Módulos en Python</h1>
+    </div>
+
+    <div class="content">
+        <h2>Funciones en Python</h2>
+        <p>Las funciones en Python son bloques de código reutilizables que realizan una tarea específica. Puedes definir tus propias funciones para organizar mejor tu código y hacer que sea más modular y legible.</p>
+
+        <h3>Definir una Función</h3>
+        <p>Para definir una función en Python, usamos la palabra clave <code>def</code>, seguida del nombre de la función y unos paréntesis. Dentro de los paréntesis, puedes definir los parámetros que recibirá la función.</p>
+
+        <pre>
+# Ejemplo de función simple
+def saludo(nombre):
+    print(f"Hola, {nombre}!")
+
+# Llamando a la función
+saludo("Carlos")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> En este ejemplo, la función <code>saludo()</code> toma un argumento <code>nombre</code> y imprime un saludo personalizado. Al llamar a la función con <code>saludo("Carlos")</code>, el programa imprime "Hola, Carlos!".
+        </div>
+
+        <h3>Funciones con Valor de Retorno</h3>
+        <p>Las funciones también pueden devolver un valor utilizando la palabra clave <code>return</code>. Esto permite que la función calcule o procese algo y devuelva el resultado para que pueda ser usado más tarde.</p>
+
+        <pre>
+# Ejemplo de función con valor de retorno
+def sumar(a, b):
+    return a + b
+
+# Llamando a la función
+resultado = sumar(3, 4)
+print(resultado)
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> En este caso, la función <code>sumar()</code> toma dos argumentos y devuelve la suma de ambos. Luego, guardamos el valor devuelto en la variable <code>resultado</code> y lo imprimimos.
+        </div>
+
+        <h2>Módulos en Python</h2>
+        <p>Los módulos son archivos de Python que contienen funciones, variables y clases que puedes importar en tu programa para reutilizar código. Python viene con muchos módulos estándar, pero también puedes crear tus propios módulos.</p>
+
+        <h3>Importar Módulos</h3>
+        <p>Para importar un módulo en Python, utilizamos la palabra clave <code>import</code>.</p>
+
+        <pre>
+# Ejemplo de importar un módulo
+import math
+
+# Usando una función del módulo math
+resultado = math.sqrt(25)
+print(resultado)
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> En este ejemplo, importamos el módulo <code>math</code> y usamos su función <code>sqrt()</code> para calcular la raíz cuadrada de 25, que es 5.
+        </div>
+
+        <h3>Crear tu Propio Módulo</h3>
+        <p>Puedes crear tu propio módulo guardando tus funciones en un archivo de Python. Para usar el módulo, solo tienes que importarlo en el programa donde lo necesites.</p>
+
+        <pre>
+# Ejemplo de archivo módulo.py
+def multiplicar(a, b):
+    return a * b
+
+# Ejemplo en otro archivo principal.py
+import modulo
+
+resultado = modulo.multiplicar(3, 4)
+print(resultado)
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> En este ejemplo, creamos un módulo llamado <code>modulo.py</code> que contiene una función <code>multiplicar()</code>. Luego, en otro archivo, importamos este módulo y usamos la función para multiplicar dos números.
+        </div>
+
+    </div>
+
+    <!-- Final y botón de siguiente página -->
+    <div class="btn-container">
+        <a href="pagina10.html" class="btn">Siguiente Página - Manejo de Excepciones</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cobra Visual Code.org | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

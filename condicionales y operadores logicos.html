@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Python: Condicionales y Operadores Lógicos</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FF7043;  /* Color naranja */
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            border-left: 5px solid #4CAF50;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .example {
+            background-color: #e9f7e9;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Estilo para el botón */
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #FF7043; /* Color naranja para el botón */
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF5722; /* Un tono más oscuro de naranja */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Condicionales y Operadores Lógicos en Python</h1>
+    </div>
+
+    <div class="content">
+        <h2>¿Qué son los condicionales?</h2>
+        <p>Los condicionales permiten que tu programa ejecute bloques de código específicos según si se cumple o no una condición. Es una de las herramientas más fundamentales en cualquier lenguaje de programación, y en Python se manejan de manera sencilla pero poderosa.</p>
+
+        <p>En Python, utilizamos las instrucciones <code>if</code>, <code>else</code> y <code>elif</code> para controlar el flujo del programa según las condiciones que definamos.</p>
+
+        <h3>La instrucción <code>if</code></h3>
+        <p>La instrucción <code>if</code> evalúa una condición, y si esa condición se evalúa como <strong>verdadera</strong>, ejecuta el bloque de código dentro del bloque de la instrucción.</p>
+
+        <pre>
+# Ejemplo de la instrucción if
+edad = 20
+if edad >= 18:
+    print("Eres mayor de edad.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Si la variable <code>edad</code> es mayor o igual a 18, el programa imprimirá "Eres mayor de edad.".
+        </div>
+
+        <h3>La instrucción <code>else</code></h3>
+        <p>La instrucción <code>else</code> se utiliza cuando la condición de un <code>if</code> no se cumple, y define qué hacer en ese caso. Si la condición es <strong>falsa</strong>, el bloque de código dentro de <code>else</code> se ejecutará.</p>
+
+        <pre>
+# Ejemplo de la instrucción else
+edad = 15
+if edad >= 18:
+    print("Eres mayor de edad.")
+else:
+    print("Eres menor de edad.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> En este caso, dado que la variable <code>edad</code> es menor que 18, se imprimirá "Eres menor de edad.".
+        </div>
+
+        <h3>La instrucción <code>elif</code></h3>
+        <p><code>elif</code> se utiliza cuando queremos comprobar múltiples condiciones. Si la condición del <code>if</code> es falsa, Python evaluará las condiciones definidas con <code>elif</code>.</p>
+
+        <pre>
+# Ejemplo con elif
+edad = 70
+if edad < 18:
+    print("Eres menor de edad.")
+elif edad >= 18 and edad <= 60:
+    print("Eres adulto.")
+else:
+    print("Eres adulto mayor.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Dependiendo de la edad, el programa clasificará a la persona como menor de edad, adulto o adulto mayor.
+        </div>
+
+        <h2>Operadores Lógicos en Python</h2>
+        <p>Los operadores lógicos son herramientas muy útiles cuando necesitas combinar múltiples condiciones. En Python, los principales operadores lógicos son:</p>
+        <ul>
+            <li><strong><code>and</code></strong>: Devuelve <code>True</code> si ambas condiciones son verdaderas.</li>
+            <li><strong><code>or</code></strong>: Devuelve <code>True</code> si al menos una de las condiciones es verdadera.</li>
+            <li><strong><code>not</code></strong>: Invierte el valor de la condición (si es <code>True</code>, se convierte en <code>False</code>, y viceversa).</li>
+        </ul>
+
+        <h3>Uso del operador <code>and</code></h3>
+        <p>El operador <code>and</code> se usa para combinar dos o más condiciones. La expresión completa será <strong>verdadera</strong> solo si todas las condiciones son verdaderas.</p>
+
+        <pre>
+# Ejemplo de uso de and
+edad = 25
+ciudad = "Madrid"
+if edad >= 18 and ciudad == "Madrid":
+    print("Eres mayor de edad y vives en Madrid.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Ambas condiciones deben ser verdaderas para que el mensaje se imprima.
+        </div>
+
+        <h3>Uso del operador <code>or</code></h3>
+        <p>El operador <code>or</code> se usa cuando quieres que se cumpla al menos una de las condiciones. Si cualquiera de las condiciones es verdadera, toda la expresión se evaluará como <code>True</code>.</p>
+
+        <pre>
+# Ejemplo de uso de or
+edad = 17
+ciudad = "Barcelona"
+if edad >= 18 or ciudad == "Barcelona":
+    print("Eres mayor de edad o vives en Barcelona.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Si la edad es mayor o igual a 18, o si la ciudad es Barcelona, el mensaje se imprimirá.
+        </div>
+
+        <h3>Uso del operador <code>not</code></h3>
+        <p>El operador <code>not</code> invierte el valor de una condición. Si una condición es <code>True</code>, el operador <code>not</code> la convierte en <code>False</code>, y viceversa.</p>
+
+        <pre>
+# Ejemplo de uso de not
+edad = 15
+if not edad >= 18:
+    print("Eres menor de edad.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Si la condición <code>edad >= 18</code> es falsa, se imprime el mensaje.
+        </div>
+
+        <h2>Combinando Condicionales y Operadores Lógicos</h2>
+        <p>Las instrucciones condicionales y los operadores lógicos se pueden combinar de manera muy flexible para crear programas más complejos. Puedes usar <code>if</code>, <code>elif</code>, <code>else</code> junto con <code>and</code>, <code>or</code>, y <code>not</code> para evaluar condiciones más avanzadas.</p>
+
+        <pre>
+# Ejemplo avanzado combinando condicionales y operadores lógicos
+edad = 25
+ciudad = "Madrid"
+trabajo = "Programador"
+if edad >= 18 and (ciudad == "Madrid" or trabajo == "Programador"):
+    print("Eres un adulto que vive en Madrid o es programador.")
+else:
+    print("No cumples las condiciones.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> El bloque de código dentro de <code>if</code> se ejecutará si la persona es adulta y vive en Madrid o si es programador.
+        </div>
+
+    </div>
+
+    <!-- Final y botón de siguiente página -->
+    <div class="btn-container">
+        <a href="pagina5.html" class="btn">Siguiente Página - Manejo de Archivos y Excepciones</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cobra Visual Code.org | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>

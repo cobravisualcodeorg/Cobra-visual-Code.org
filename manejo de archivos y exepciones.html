@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introducción a Python: Manejo de Archivos y Excepciones</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FF7043;  /* Color naranja */
+            color: #333;
+        }
+
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+        }
+
+        pre {
+            background-color: #f1f1f1;
+            border-left: 5px solid #4CAF50;
+            padding: 10px;
+            overflow-x: auto;
+        }
+
+        .example {
+            background-color: #e9f7e9;
+            padding: 10px;
+            border: 1px solid #4CAF50;
+            margin-bottom: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            margin-top: 30px;
+        }
+
+        /* Estilo para el botón */
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            background-color: #FF7043; /* Color naranja para el botón */
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF5722; /* Un tono más oscuro de naranja */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>Manejo de Archivos y Excepciones en Python</h1>
+    </div>
+
+    <div class="content">
+        <h2>Manejo de Archivos</h2>
+        <p>En Python, trabajar con archivos es una tarea común que se puede hacer fácilmente usando funciones integradas. Los archivos pueden ser leídos, escritos o incluso abiertos en diferentes modos, según las necesidades del programa.</p>
+
+        <h3>Abrir un archivo</h3>
+        <p>Para abrir un archivo en Python, usamos la función <code>open()</code>, pasando el nombre del archivo y el modo en el que queremos trabajar con él. Los modos más comunes son:</p>
+        <ul>
+            <li><code>r</code>: Leer (modo predeterminado, si no se especifica).</li>
+            <li><code>w</code>: Escribir (crea un nuevo archivo o sobrescribe uno existente).</li>
+            <li><code>a</code>: Añadir (agrega contenido al final del archivo).</li>
+        </ul>
+
+        <pre>
+# Ejemplo de apertura de un archivo en modo lectura
+archivo = open("mi_archivo.txt", "r")
+contenido = archivo.read()
+print(contenido)
+archivo.close()
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Este código abre un archivo llamado "mi_archivo.txt" en modo de lectura, lee su contenido y luego cierra el archivo.
+        </div>
+
+        <h3>Escribir en un archivo</h3>
+        <p>Si queremos escribir en un archivo, podemos usar el modo <code>w</code> o <code>a</code>. Si el archivo no existe, Python lo creará.</p>
+
+        <pre>
+# Ejemplo de escritura en un archivo
+archivo = open("mi_archivo.txt", "w")
+archivo.write("Este es un nuevo contenido.")
+archivo.close()
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Este código crea o sobrescribe el archivo "mi_archivo.txt" con el texto especificado.
+        </div>
+
+        <h2>Excepciones en Python</h2>
+        <p>Las excepciones son errores que pueden ocurrir durante la ejecución de un programa. Python ofrece una forma de manejar estos errores para evitar que el programa se detenga inesperadamente.</p>
+
+        <h3>Uso de <code>try</code> y <code>except</code></h3>
+        <p>La estructura básica de manejo de excepciones en Python es el bloque <code>try-except</code>. Se coloca el código que puede generar un error dentro del bloque <code>try</code>, y si ocurre una excepción, se maneja con el bloque <code>except</code>.</p>
+
+        <pre>
+# Ejemplo de manejo de excepciones
+try:
+    numero = int(input("Ingresa un número: "))
+    print(10 / numero)
+except ZeroDivisionError:
+    print("No se puede dividir por cero.")
+except ValueError:
+    print("Debes ingresar un número válido.")
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Este código maneja dos tipos de excepciones: división por cero y entrada de datos no numéricos.
+        </div>
+
+        <h3>El bloque <code>finally</code></h3>
+        <p>El bloque <code>finally</code> se ejecuta independientemente de si ocurrió una excepción o no. Se utiliza para realizar tareas de limpieza, como cerrar archivos o liberar recursos.</p>
+
+        <pre>
+# Ejemplo con finally
+try:
+    archivo = open("mi_archivo.txt", "r")
+    contenido = archivo.read()
+except FileNotFoundError:
+    print("El archivo no se encontró.")
+finally:
+    archivo.close()
+        </pre>
+
+        <div class="example">
+            <strong>Explicación:</strong> Incluso si ocurre un error al intentar leer el archivo, el bloque <code>finally</code> garantiza que el archivo se cierre correctamente.
+        </div>
+
+    </div>
+
+    <!-- Final y botón de siguiente página -->
+    <div class="btn-container">
+        <a href="pagina6.html" class="btn">Siguiente Página - Funciones en Python</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Cobra Visual Code.org | Todos los derechos reservados</p>
+    </footer>
+
+</body>
+</html>
